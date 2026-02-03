@@ -2,10 +2,14 @@
   box-sizing: border-box;
 }
 
+
 body {
-  font-family: sans-serif;
-  margin: 20px;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+  min-height: 100vh;
+  color: #222;
 }
 
 h1 {
@@ -57,18 +61,28 @@ body {
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: #f4f7fa;
+  border: 2px solid #4f8cff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
   float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 48px;
+  height: 48px;
+  margin-right: 8px;
+  margin-top: 8px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 48px;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.square:hover {
+  background: #e6f0ff;
+  box-shadow: 0 4px 16px rgba(79, 140, 255, 0.15);
+  border-color: #2563eb;
 }
 
 .board-row:after {
@@ -78,13 +92,55 @@ body {
 }
 
 .status {
-  margin-bottom: 10px;
+  margin-bottom: 18px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2563eb;
+  letter-spacing: 0.5px;
 }
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 48px;
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-left: 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 24px 32px;
+  min-width: 220px;
+}
+
+.game-info ol {
+  padding-left: 18px;
+}
+
+.game-info button {
+  background: #e6f0ff;
+  border: none;
+  border-radius: 6px;
+  color: #2563eb;
+  font-size: 1rem;
+  padding: 6px 14px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.game-info button:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.game-board {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(79, 140, 255, 0.10);
+  padding: 32px 40px 32px 32px;
+  margin-right: 16px;
 }
